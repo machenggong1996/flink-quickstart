@@ -88,7 +88,7 @@
               </filters>
               <transformers>
                 <transformer>
-                  <mainClass>org.example.StreamingJob</mainClass>
+                  <mainClass>org.example.wc.StreamWordCount</mainClass>
                 </transformer>
               </transformers>
             </configuration>
