@@ -103,6 +103,23 @@ ResourceManger(启动，注册slots，发出提供slot的指令)<->taskManger(�
 * maxBy
 * reduce 要先KeyBy 优点是比起minBy maxBy可以获取最新数据
 
+#### 5.2.2 分流计算
+
+* dataStream.split过时 使用sideOut代替
+
+#### 5.2.3 合流计算
+
+* ConnectedStreams MapFunction 实现map1 map2 方法
+
+#### 5.2.4 多条流合并 union 数据类型必须相同
+
+* DataStream.union
+
+#### 5.2.5 UDF函数类
+
+* Function
+* Rich Functions
+
 ## b站
 
-该看p31了
+该看p36了
