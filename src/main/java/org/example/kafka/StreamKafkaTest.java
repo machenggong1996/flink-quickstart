@@ -12,7 +12,7 @@ import org.apache.flink.streaming.api.functions.windowing.WindowFunction;
 import org.apache.flink.streaming.api.watermark.Watermark;
 import org.apache.flink.streaming.api.windowing.time.Time;
 import org.apache.flink.streaming.api.windowing.windows.TimeWindow;
-import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer;
+import org.apache.flink.streaming.connectors.kafka.FlinkKafkaConsumer011;
 import org.apache.flink.util.Collector;
 
 import javax.annotation.Nullable;
@@ -31,12 +31,13 @@ public class StreamKafkaTest {
 
         Properties props = new Properties();
         props.setProperty("bootstrap.servers", "localhost:9092");
+        props.setProperty("zookeeper.connect", "localhost:2181");
         props.setProperty("group.id", "flink-kafka");
         props.setProperty("key.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");  //key 反序列化
         props.setProperty("value.deserializer", "org.apache.kafka.common.serialization.StringDeserializer");
         props.setProperty("auto.offset.reset", "latest"); //value 反序列化
 
-        FlinkKafkaConsumer<String> consumer =new FlinkKafkaConsumer<String>(
+        FlinkKafkaConsumer011<String> consumer =new FlinkKafkaConsumer011<String>(
                 "flink-kafka-topic",  //kafka topic 这里改成需要的kafka主题
                 new SimpleStringSchema(),  // String 序列化
                 props);
