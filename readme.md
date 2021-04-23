@@ -120,6 +120,17 @@ ResourceManger(启动，注册slots，发出提供slot的指令)<->taskManger(�
 * Function
 * Rich Functions
 
+### 5.3 数据充分区操作
+
+* shuffle
+* reBalance
+* global
+* keyBy
+
+### 5.4 sink迭代操作
+
+* sink是写入操作，source是读取操作
+
 ## b站
 
-该看p36了
+该看p42了
