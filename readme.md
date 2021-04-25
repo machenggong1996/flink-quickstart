@@ -131,6 +131,15 @@ ResourceManger(启动，注册slots，发出提供slot的指令)<->taskManger(�
 
 * sink是写入操作，source是读取操作
 
+## 6. 窗口API
+
+* [Flink Window窗口机制](https://www.cnblogs.com/ronnieyuan/p/11847568.html)
+
+* 翻滚窗口 (Tumbling Window, 无重叠)
+* 滑动窗口 (Sliding Window, 有重叠)
+* 会话窗口 (Session Window, 活动间隙)
+* 全局窗口 (略)
+
 ## b站
 
 该看p42了
